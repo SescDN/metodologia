@@ -1,0 +1,355 @@
+/* reset
+------------------------------ */
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html, body, nav, section, table, th, td, h1, h2, h3, h4, h5, p, a, ul, li {
+	margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+}
+
+/* fontes
+------------------------------ */
+h1, h2, h3, h4, h5 {
+    font-family: "Libre Franklin";
+    color: #FFF;
+}
+
+h1, h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 26px;
+    font-style: italic;
+    color: #02B3C5;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+p, a, span {
+    font-family: "Libre Franklin";
+    line-height: 26px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #E1E1E1;
+}
+
+em {
+    color: #02B3C5;
+}
+
+/* globais
+------------------------------ */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay, .fundo {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* body
+------------------------------ */
+body {
+    position: relative;
+    padding-top: 30px;
+}
+
+body > .background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url("elementos/imagens/background.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -9;
+}
+
+body > .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(42, 57, 68, 0.25);
+    backdrop-filter: blur(3px);
+}
+
+/* slider
+------------------------------ */
+#slider {
+    margin-bottom: 120px;
+}
+
+#slider h1, h2, section {
+    margin-bottom: 110px;
+}
+
+#slider h3, h4 {
+    margin-bottom: 30px;
+}
+
+#slider hr {
+    height: 30px;
+    margin: 0 30px;
+    border-right: 2px solid #02B3C5;
+    border-radius: 2px;
+}
+
+#slider p,
+#slider a {
+    margin-bottom: 15px;
+}
+
+
+#slider .mais {
+    font-size: 26px;
+    color: #02B3C5;
+    cursor: pointer;
+}
+
+#slider aside {
+    display: none;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-left: 5px solid #02B3C5;
+    border-radius: 5px 10px 10px 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+#slider aside p,
+#slider aside a {
+    font-size: 14px;
+}
+
+#slider p:last-of-type {
+    margin-bottom: 0;
+}
+
+#slider .imagem {
+    align-self: stretch;
+    min-width: 350px;
+    min-height: 100px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+#slider .imagem.fullwidth {
+    margin: 0 auto 110px;
+    min-width: 500px;
+    min-height: 300px;
+}
+
+#slider .texto {
+    padding: 20px 0;
+}
+
+#slider .textoeimagem {
+    flex-direction: row;
+}
+
+#slider .textoeimagem .texto {
+    margin-left: 30px;
+}
+
+#slider .imagemetexto {
+    flex-direction: row-reverse;
+}
+
+#slider .imagemetexto .texto {
+    margin-right: 30px;
+}
+
+#slider .imagemtextoelinks {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+#slider .imagemtextoelinks .imagem {
+    min-width: 250px;
+    margin-right: 30px;
+    border-radius: 10px 0 0 10px;
+}
+
+#slider .imagemtextoelinks .texto {
+    margin: 30px 0;
+    padding: 0;
+}
+
+#slider .imagemtextoelinks .links {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    min-width: 230px;
+    margin: 30px 0;;
+}
+
+#slider .imagemtextoelinks a:last-of-type {
+    margin-bottom: 0;
+}
+
+/* controle
+------------------------------ */
+#controle {
+    position: fixed;
+    bottom: 50px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    padding: 15px 18px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+}
+
+.slick-dots li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.slick-dots li:last-of-type {
+    margin-right: 0;
+}
+
+.slick-dots a {
+    text-align: center;
+    line-height: 1em;
+}
+
+.slick-dots svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    border-color: #E1E1E1;
+    background: #fff; 
+}
+
+.slick-active a {
+    color: #02B3C5;
+}
+
+.slick-active svg {
+    border: 1px solid #02B3C5;
+    background: #02B3C5;
+}
+
+
+/* media queries
+------------------------------ */
+@media only screen and (max-width: 1100px) {
+    .container {
+        width: 90%;
+    }
+
+    #slider .imagem {
+        min-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #slider h1, h2 {
+        text-align: center;
+    }
+
+    #slider h1, h2, section {
+        margin-bottom: 70px;
+    }
+
+    #slider .textoeimagem,
+    #slider .imagemetexto {
+        flex-direction: column-reverse;
+    }
+
+    #slider .imagemtextoelinks {
+        flex-direction: column;
+    }
+
+    #slider .imagem,
+    #slider .imagemtextoelinks .imagem {
+        min-height: 150px;
+    }
+
+    #slider .imagemtextoelinks .imagem {
+        margin-right: 0;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #slider .texto {
+        padding: 30px 0 0 0;
+    }
+
+    #slider .textoeimagem .texto {
+       margin-left: 0;
+    }
+
+    #slider .imagemtextoelinks .texto,
+    #slider .imagemtextoelinks .links {
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    #slider hr {
+        display: none;
+    }
+
+    .slick-dots li {
+        margin-right: 30px;
+    }
+
+    .slick-dots a {
+        display: none;
+    }
+}
