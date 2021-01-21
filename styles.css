@@ -87,31 +87,14 @@ section {
 /* body
 ------------------------------ */
 body {
-    position: relative;
     padding-top: 30px;
-}
-
-body > .background {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-image: url("elementos/imagens/background.png");
+    background-image: url("elementos/vetores/bg.svg");
+    background-color: #1e1e20;
     background-size: cover;
-    background-position: center;
-    z-index: -9;
+    background-position: top;
 }
 
-body > .overlay {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: rgba(42, 57, 68, 0.25);
-    backdrop-filter: blur(3px);
-}
+body
 
 /* slider
 ------------------------------ */
@@ -121,6 +104,10 @@ body > .overlay {
 
 #slider h1, h2, section {
     margin-bottom: 110px;
+}
+
+#slider h1, h2 {
+    text-align: center;
 }
 
 #slider h3, h4 {
@@ -172,6 +159,7 @@ body > .overlay {
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 #slider .imagem.fullwidth {
@@ -300,8 +288,8 @@ body > .overlay {
 }
 
 @media only screen and (max-width: 900px) {
-    #slider h1, h2 {
-        text-align: center;
+    body {
+        background-image: url("elementos/vetores/bgmobile.svg");
     }
 
     #slider h1, h2, section {
